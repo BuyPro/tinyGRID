@@ -1,0 +1,11 @@
+{
+  "name": "Gridz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "compile.js",
+  "devDependencies": {
+    "less": "^2.2.0"
+  },
+  "author": "Louis Capitanchik",
+  "license": "ISC"
+}
