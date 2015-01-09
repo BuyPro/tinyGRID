@@ -1,0 +1,43 @@
+/* Defaults */
+
+[class*="col-"] {
+	position: relative;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	padding-right: (@margin / 2);
+	padding-left: (@margin / 2);
+	float: left;
+	min-height: 1px;
+	width: 100%;
+}
+
+/* Create Columns */
+
+.create-columns(@columns, sm);
+.create-column-offsets(@columns, sm);
+
+@media (min-width: 768px){
+	.create-columns(@columns, md);
+	.create-column-offsets(@columns, md);
+}
+@media (min-width: 992px){
+	.create-columns(@columns, lg);
+	.create-column-offsets(@columns, lg);
+}
+@media (min-width: 1200px){
+	.create-columns(@columns, xl);
+	.create-column-offsets(@columns, xl);
+}
+
+/* Create hide classes */
+
+@media (max-width: 767px){
+	.hide-on(sm);
+}
+@media (max-width: 991px){
+	.hide-on(md);
+}
+@media (max-width: 1199px){
+	.hide-on(lg);
+}
