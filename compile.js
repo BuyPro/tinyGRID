@@ -11,6 +11,11 @@ var less = require('less'),
             {
                 src: "main.less",
                 dest: "tinygrid.css"
+            },
+            {
+                compress: true,
+                src: "main.less",
+                dest: "tinygrid.min.css"
             }
         ]
     },
@@ -27,7 +32,7 @@ var less = require('less'),
     },
     readLess = function (num, err, data) {
         data = data.toString();
-        less.render(data, {paths: [config.src], compress: config.compress}, function (e, less) {
+        less.render(data, {paths: [config.src], compress: config.files[num].compress || config.compress}, function (e, less) {
             if(e){
                 console.error(e);
             } else {
